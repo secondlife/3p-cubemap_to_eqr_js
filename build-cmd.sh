@@ -34,13 +34,6 @@ echo "1.1.0" > "$stage/VERSION.txt"
 
 case "$AUTOBUILD_PLATFORM" in
     windows* | darwin64)
-
-        mkdir -p "$stage/js"
-        mkdir -p "$stage/LICENSES"
-
-        cp "${SOURCE_DIR}/src/CubemapToEquirectangular.js" "$stage/js/"
-
-        cp "${SOURCE_DIR}/LICENSE" "$stage/LICENSES/CUBEMAPTOEQUIRECTANGULAR_LICENSE.txt"
     ;;
 
     "linux")
@@ -49,3 +42,10 @@ case "$AUTOBUILD_PLATFORM" in
     "linux64")
     ;;
 esac
+
+mkdir -p "$stage/js"
+mkdir -p "$stage/LICENSES"
+
+cp "${SOURCE_DIR}/src/CubemapToEquirectangular.js" "$stage/js/"
+
+cp "${SOURCE_DIR}/LICENSE" "$stage/LICENSES/CUBEMAPTOEQUIRECTANGULAR_LICENSE.txt"
